@@ -1,0 +1,8 @@
+---
+
+- name: Install common utilities
+  apt:
+    name: "{{ system_utils }}"
+    state: present
+    update_cache: yes
+...

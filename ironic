@@ -1,0 +1,5 @@
+[ceph_nvme]
+k02r10nvm01 ansible_host=10.48.0.44
+k02r11nvm01 ansible_host=10.48.0.118
+k02r11nvm02 ansible_host=10.48.0.152
+k02r12nvm01 ansible_host=10.48.0.110

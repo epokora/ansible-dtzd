@@ -1,0 +1,2 @@
+[seafile]
+pcss-srv-test-sf00 ansible_host=172.16.178.78

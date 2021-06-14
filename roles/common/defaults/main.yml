@@ -1,0 +1,28 @@
+---
+
+# List of UNIX group which will have full root access, using sudo
+#system_admin_groups: ['admins','Domain\ Admins']
+
+# Email address of the admin (will receive root email)
+# system_admin_email: admin@domain.net
+
+# List of basic system utilisties to install
+# List of basic system utilisties to install
+system_utils:
+  - htop
+  - tmux
+  - iftop
+  - pv
+  - mc
+  - vim
+  - wget
+  - curl
+  - lsof
+  - tcpdump
+  - smartmontools
+  - tree
+  - iperf3
+  - fio
+
+# System Timezone
+system_tz: 'Europe/Warsaw'

@@ -1,0 +1,10 @@
+---
+- name: Deploy common profiles
+  hosts: '*'
+  roles:
+    - common
+
+- name: Deploy ceph
+  hosts: ceph_nvme
+  roles:
+    - ceph

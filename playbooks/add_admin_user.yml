@@ -1,0 +1,14 @@
+---
+- name: Add new user with admin rights
+  hosts: '*'
+
+  tasks:
+  - name: Setup Admin User
+    user:
+      name: aprycki
+      password: '$6$awMSJg0q$OxY49/tcsjNmMmsl0e6Bn2.5m3nB7ZKe5s8APl4VRibMevFGmRkaOzxguGuy.zQYgyvD5t/EivxekhwY1pvfO1'
+      shell: /bin/bash
+      groups:
+        - sudo
+      append: yes 
+      comment: Admin User
