@@ -1,0 +1,5 @@
+# ignore all ssh directories
+ssh/
+
+# ignore all files ending with ~
+*~
