@@ -1,0 +1,21 @@
+netplan_configuration:
+  network:
+    version: 2
+    bonds:
+      bond0:
+        addresses:
+          - 10.48.10.35/24
+        interfaces:
+          - enp175s0f0
+          - enp175s0f1
+        parameters:
+          mode: balance-alb
+         
+    ethernets:
+      eno1:
+        dhcp4: true
+      enp175s0f0: {}
+      enp175s0f1: {}
+      ibs1f0:
+        addresses:
+          - 192.168.222.35/24

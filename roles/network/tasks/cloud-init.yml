@@ -1,0 +1,5 @@
+---
+
+- name: Deploy 99-disable-network-config.cfg
+  copy: src=99-disable-network-config.cfg dest=/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+  when: cloud_init_disabled

@@ -1,0 +1,10 @@
+---
+
+- name: Deploy Netplan Config
+  template:
+    src: config.yaml.j2
+    dest: "{{ netplan_config_file }}"
+  when: netplan_configuration != [] and netplan_deploy
+  notify:
+  - Refresh facts
+  - Apply netplan

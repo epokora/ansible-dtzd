@@ -1,0 +1,5 @@
+---
+# vars file for mlnx-ofed
+mlnx_ofed_iso_filename: /tmp/mlnx-ofed-{{mlnx_ofed_version}}-{{ansible_distribution}}{{ansible_distribution_version}}.iso
+mlnx_ofed_tgz_filename: /tmp/MLNX_OFED_LINUX-{{mlnx_ofed_version}}-{{ansible_distribution|lower}}{{ansible_distribution_version}}-x86_64.tgz
+mlnx_ofed_dir: /tmp/MLNX_OFED_LINUX-{{mlnx_ofed_version}}-{{ansible_distribution|lower}}{{ansible_distribution_version}}-x86_64

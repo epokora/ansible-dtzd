@@ -1,0 +1,9 @@
+---
+
+- name: Set openibd to ignore the kernel diff 
+  lineinfile:
+    path: /etc/init.d/openibd
+    regexp: '^FORCE=0'
+    line: FORCE=1
+  #notify:
+  #- Restart openibd

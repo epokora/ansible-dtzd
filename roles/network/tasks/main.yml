@@ -1,0 +1,11 @@
+---
+
+- debug:
+    msg: "{{ ansible_facts['ibs2f0']['active'] }}"
+  ignore_errors: True
+
+- include_tasks: netplan.yml
+- include_tasks: hosts.yml
+- include_tasks: cloud-init.yml
+
+...

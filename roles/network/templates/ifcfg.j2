@@ -1,0 +1,37 @@
+# {{ ansible_managed }}
+ANSIBLE=yes
+NAME={{ item.name }}
+DEVICE={{ item.name }}
+BOOTPROTO={{ (item.ip4.enabled == True and item.ip4.method == 'dhcp') | ternary('dhcp', 'none') }}
+ONBOOT=yes
+{% if item.bridge is defined and item.type != 'bridge' %}
+BRIDGE={{ item.bridge }}
+{% endif %}
+{% if item.type == 'vlan' %}
+TYPE=Vlan
+VLAN=yes
+{% if item.vlanid is defined %}
+VLAN_ID={{ item.vlanid }}
+{% endif %}
+{% if item.vlandev is defined %}
+PHYSDEV={{ item.vlandev }}
+{% endif %}
+{% elif item.type == 'bridge' %}
+TYPE=Bridge
+STP=off
+{% elif item.type == 'ethernet' %}
+TYPE=Ethernet
+{% endif %}
+{% if item.ip4.enabled == True and item.ip4.method != 'dhcp' %}
+{% for addr in item.ip4.addr | default([]) %}
+IPADDR={{ addr.split('/')[0] }}
+PREFIX={{ addr.split('/')[1] }}
+{% endfor %}
+{% if item.ip4.gw is defined %}
+GATEWAY={{ item.ip4.gw }}
+{% endif %}
+{% for dns in item.ip4.dns | default([]) %}
+DNS1={{ dns }}
+{% endfor %}
+{% endif %}
+IPV6INIT=no

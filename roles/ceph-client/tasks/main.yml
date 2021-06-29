@@ -1,0 +1,5 @@
+---
+
+#- include_tasks: docker.yml
+- include_tasks: ceph_client.yml
+

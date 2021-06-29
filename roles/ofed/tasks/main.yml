@@ -1,0 +1,16 @@
+---
+
+- shell: ofed_info -n
+  register: ofed_version
+  ignore_errors: True
+
+- include: mlnx-ofed-install.yml
+  when: ofed_version is failed or ofed_version.stdout != mlnx_ofed_version
+
+- name: check if openibd file exists
+  stat: 
+    path:  /etc/init.d/openibd
+  register: openibd_file
+
+- include: openibd.yml
+  when: openibd_file.stat.exists

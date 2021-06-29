@@ -1,0 +1,5 @@
+---
+# defaults file for mlnx-ofed
+mlnx_ofed_url: https://content.mellanox.com/ofed/MLNX_OFED-5.3-1.0.0.1/MLNX_OFED_LINUX-5.3-1.0.0.1-ubuntu20.04-x86_64.tgz 
+mlnx_ofed_tgz_checksum: sha256:60ebda2e8f038fa199d85d5e3f7abaa7f479a6ca8eaa3883a1ea41f5a35afd82
+mlnx_ofed_version: 5.3-1.0.0.1

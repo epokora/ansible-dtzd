@@ -1,0 +1,8 @@
+---
+
+- name: Refresh facts
+  setup:
+
+- name: Apply netplan
+  command: netplan apply
+  when: ansible_facts['ibs2f0']['active'] is defined or ansible_facts['ibs1f0']['active'] is defined

@@ -1,0 +1,17 @@
+---
+
+- name: Add Ceph official GPG key
+  apt_key:
+    url: https://download.ceph.com/keys/release.asc 
+    state: present
+
+- name: Set up Ceph the stable repository
+  apt_repository:
+    repo: deb https://download.ceph.com/debian-pacific/ {{ ansible_distribution_release }} main
+
+- name: Install Ceph client utilities
+  apt:
+    name: "{{ ceph_utils }}"
+    state: present
+    update_cache: yes
+

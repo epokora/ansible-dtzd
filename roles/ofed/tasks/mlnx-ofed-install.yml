@@ -1,0 +1,17 @@
+- name: Download MLNX OFED tgz
+  get_url:
+    url: "{{ mlnx_ofed_url }}"
+    dest: "{{ mlnx_ofed_tgz_filename }}"
+    mode: 0755
+    checksum: "{{ mlnx_ofed_tgz_checksum }}"
+
+- name: Extract MLNX OFED tgz into /tmp
+  unarchive:
+    src: "{{ mlnx_ofed_tgz_filename }}"
+    dest: /tmp
+    remote_src: yes
+
+- name: Install MLNX OFED  
+  command: "{{ mlnx_ofed_dir }}/mlnxofedinstall --force --without-fw-update"
+  #notify:
+  #  - Restart node
