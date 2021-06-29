@@ -1,5 +1,25 @@
-[ceph_nvme]
+[ceph_nvm]
 k02r10nvm01 ansible_host=10.48.0.44
+k02r10nvm02 ansible_host=10.48.0.26
+k02r10nvm03 ansible_host=10.48.0.62
+k02r10nvm04 ansible_host=10.48.0.55
 k02r11nvm01 ansible_host=10.48.0.118
 k02r11nvm02 ansible_host=10.48.0.152
+k02r11nvm04 ansible_host=10.48.0.139
+k02r11nvm05 ansible_host=10.48.0.103
 k02r12nvm01 ansible_host=10.48.0.110
+k02r12nvm02 ansible_host=10.48.0.185
+k02r12nvm03 ansible_host=10.48.0.119
+k02r12nvm04 ansible_host=10.48.0.46
+
+[client_cph]
+k02r14cph01 ansible_host=10.48.0.141
+k02r14cph02 ansible_host=10.48.0.69
+k02r14cph03 ansible_host=10.48.0.66
+k02r15cph07 ansible_host=10.48.0.19
+k02r15cph09 ansible_host=10.48.0.114
+k02r15cph14 ansible_host=10.48.0.35
+k02r15cph15 ansible_host=10.48.0.24
+k02r16cph01 ansible_host=10.48.0.60
+k02r16cph02 ansible_host=10.48.0.78
+k02r16cph03 ansible_host=10.48.0.215

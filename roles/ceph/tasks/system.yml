@@ -1,7 +1,0 @@
----
-
-- name: Deploy .vimrc
-  copy: src=.vimrc dest=/etc/skel/.vimrc
-
-- name: Deploy .bashrc
-  copy: src=.bashrc dest=/root/.bashrc

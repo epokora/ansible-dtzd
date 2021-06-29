@@ -5,7 +5,7 @@
 - include_tasks: utils.yml
 - include_tasks: tz.yml
 - include_tasks: system.yml
-
+- include_tasks: updates.yml
 ...
 
 #- include_tasks: tuned.yml

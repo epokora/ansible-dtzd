@@ -1,10 +1,26 @@
 ---
+
 - name: Deploy common profiles
   hosts: '*'
   roles:
     - common
 
-- name: Deploy ceph
-  hosts: ceph_nvme
+- name: Deploy MLNX OFED
+  hosts: '*'
+  roles:
+    - ofed
+
+- name: Deploy network config
+  hosts: '*'
+  roles:
+    - network
+
+- name: Deploy ceph cluster requirements
+  hosts: ceph_nvm
   roles:
     - ceph
+
+- name: Deploy ceph client
+  hosts: client_cph
+  roles:
+    - ceph-client

@@ -1,5 +1,7 @@
 ---
 
+disable_updates: true
+
 # List of UNIX group which will have full root access, using sudo
 #system_admin_groups: ['admins','Domain\ Admins']
 

@@ -3,16 +3,3 @@
 - include_tasks: docker.yml
 - include_tasks: ceph.yml
 
-...
-
-#- include_tasks: tuned.yml
-#  when:
-#    - ansible_virtualization_role == 'host' or ansible_virtualization_type != 'lxc'
-#    - ansible_os_family == 'RedHat'
-#- include_tasks: mail.yml
-#- include_tasks: system.yml
-#- include_tasks: hardware.yml
-#  when: ansible_virtualization_role == 'host'
-#- include_tasks: guest.yml
-#  when:
-#    - ansible_virtualization_role == 'guest'

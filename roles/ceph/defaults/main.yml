@@ -13,4 +13,6 @@ docker_engine:
   - docker-ce-cli
   - containerd.io
 
-ceph_utils: cephadm
+ceph_utils:
+  - cephadm
+  - ceph-common

@@ -15,4 +15,3 @@
     name: "{{ docker_engine }}"
     state: present
     update_cache: yes
-...

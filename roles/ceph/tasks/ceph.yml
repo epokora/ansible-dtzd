@@ -9,9 +9,9 @@
   apt_repository:
     repo: deb https://download.ceph.com/debian-pacific/ {{ ansible_distribution_release }} main
 
-#- name: Install ceph utilities
-#  apt:
-#    name: "{{ ceph_utils }}"
-#    state: present
-#    update_cache: yes
-...
+- name: Install ceph utilities
+  apt:
+    name: "{{ ceph_utils }}"
+    state: present
+    update_cache: yes
+
